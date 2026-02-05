@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 22:04:24 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/04 13:52:59 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/02/05 19:25:58 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ class Bureaucrat
 		Bureaucrat(std::string name, unsigned int grade);
 		~Bureaucrat(void);
 		Bureaucrat(const Bureaucrat &other);
+		Bureaucrat		&operator=(const Bureaucrat &other);
 		std::string		getName(void) const;
 		unsigned int	getGrade(void) const;
 		void			decrementGrade(void);
