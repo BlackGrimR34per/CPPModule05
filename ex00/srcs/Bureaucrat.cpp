@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 22:04:22 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/05 19:27:15 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/02/07 17:57:34 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other):
 
 Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &other)
 {
-	this->grade = other.grade;
+	if (this != &other)
+		this->grade = other.grade;
 	std::cout << "Bureaucrat's copy assignment operator was called" << std::endl;	
 }
 
