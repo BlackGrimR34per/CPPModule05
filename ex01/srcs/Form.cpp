@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:07:58 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/07 18:17:51 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/09/04 18:03:36 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 #include "../include/Bureaucrat.hpp"
 
 Form::Form(void):
-	name("Default Form"), isSigned(false), signGrade(150), execGrade(150)
+	name("Default Form"), signGrade(150), execGrade(150), isSigned(false)
 {
 	std::cout << "Default Form constructor was called" << std::endl;
 }
 
 Form::Form(std::string name):
-	name(name), isSigned(false), signGrade(150), execGrade(150)
+	name(name), signGrade(150), execGrade(150), isSigned(false)
 {
 	std::cout << "Form's parameterised constructor was called" << std::endl;
 }
 
 Form::Form(std::string name, unsigned int signGrade, unsigned int execGrade):
-	name(name), isSigned(false), signGrade(signGrade), execGrade(execGrade)
+	name(name), signGrade(signGrade), execGrade(execGrade), isSigned(false)
 {
 	if (signGrade < 1 || execGrade < 1)
 		throw Form::GradeTooHighException();
@@ -51,7 +51,7 @@ Form::~Form()
 }
 
 Form::Form(const Form &other):
-	name(other.name), execGrade(other.execGrade), signGrade(other.signGrade), isSigned(other.isSigned)
+	name(other.name), signGrade(other.signGrade), execGrade(other.execGrade), isSigned(other.isSigned)
 {
 	std::cout << "Forms copy constructor was called" << std::endl;
 }
