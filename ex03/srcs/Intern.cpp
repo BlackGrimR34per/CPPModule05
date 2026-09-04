@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 18:10:50 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/10 19:46:51 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/09/04 19:50:13 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ Intern &Intern::operator=(const Intern &other)
 
 AForm *Intern::makeForm(std::string name, std::string target)
 {
-	std::string	formNames[3] = {
+	std::string	formNames[NUM_OF_FORM] = {
 		"presidential pardon",
 		"robotomy request",
 		"shrubbery creation"
 	};
-	AForm *(*creator[3])(const std::string &target) = {
+	AForm *(*creator[NUM_OF_FORM])(const std::string &target) = {
 		&createPresidential,
 		&createRobotomy,
 		&createShrubbery
