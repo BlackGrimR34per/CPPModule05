@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:49:41 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/10 17:16:30 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/09/04 21:09:01 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../include/AForm.hpp"
 # include <random>
+# include <cstdlib>
 
 class RobotomyRequestForm: public AForm
 {
