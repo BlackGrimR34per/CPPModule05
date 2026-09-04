@@ -5,8 +5,8 @@ int	main(void)
 {
 	try
 	{
-		Bureaucrat b(1);
-		std::cout << b;
+		Bureaucrat bureaucrat(-1);
+		std::cout << bureaucrat;
 	}
 	catch (const std::exception &e)
 	{
