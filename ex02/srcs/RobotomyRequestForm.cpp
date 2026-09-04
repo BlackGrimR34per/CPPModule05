@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 17:55:46 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/10 17:16:08 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/09/04 20:15:54 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,12 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 	return (*this);
 }
 
+// Need to overhaul it's not C++98
 void	RobotomyRequestForm::executeAction(void) const
 {
 	std::cout << "Makes some drilling noises" << std::endl;
-	std::random_device	rd;
-	std::mt19937 mt_eng(rd());
-	std::uniform_int_distribution<int> dist(0, 1);
-	int outcome = dist(mt_eng);
+	std::srand(static_cast<unsigned int>(std::time(NULL)));
+	int outcome = std::rand() % 2;
 	if (outcome == 0)
 		std::cout << target << " has been robotomized" << std::endl;
 	else
