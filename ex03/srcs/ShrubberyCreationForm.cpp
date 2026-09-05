@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 20:54:55 by yosherau          #+#    #+#             */
-/*   Updated: 2026/09/04 21:05:42 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/09/05 15:03:43 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ShrubberyCreationForm::executeAction(void) const
 	std::ofstream	outFile((target + "_shrubbery").c_str());
 	std::ifstream	inputFile("art.txt");
 
-	if (!outFile.is_open())
+	if (!outFile.is_open() || !inputFile.is_open())
 		std::exit(EXIT_FAILURE);
 	std::string	line;
 	while (std::getline(inputFile, line))
