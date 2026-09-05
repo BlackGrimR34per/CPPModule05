@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 20:49:51 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/10 17:16:24 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/09/05 15:05:48 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 # include "../include/AForm.hpp"
-#include <iostream>
-#include <fstream>
+# include <fstream>
+# include <cstdlib>
 
 class ShrubberyCreationForm: public AForm
 {
