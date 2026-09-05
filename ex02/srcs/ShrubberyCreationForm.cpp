@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 20:54:55 by yosherau          #+#    #+#             */
-/*   Updated: 2026/09/04 19:47:06 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/09/05 15:03:31 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void	ShrubberyCreationForm::executeAction(void) const
 {
-	std::ofstream	outFile(target + "_shrubbery");
+	std::ofstream   outFile((target + "_shrubbery").c_str());
 	std::ifstream	inputFile("art.txt");
 
 	if (!outFile.is_open() || !inputFile.is_open())
