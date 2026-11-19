@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 20:40:42 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/10 19:44:52 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/11/19 17:46:39 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	main(void)
 	Intern someRandomIntern;
 	AForm* rrf;
 	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	delete(rrf);
 	std::cout << rrf << std::endl;
 }
