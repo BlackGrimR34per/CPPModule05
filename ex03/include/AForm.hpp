@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 15:44:43 by yosherau          #+#    #+#             */
-/*   Updated: 2026/02/10 17:16:40 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/11/19 17:46:30 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ class AForm
 		AForm(void);
 		AForm(std::string name);
 		AForm(std::string name, unsigned int signGrade, unsigned int execGrade);
-		~AForm(void);
+		virtual ~AForm(void);
 		AForm(const AForm &other);
 		AForm			&operator=(const AForm &other);
 		std::string		getName(void) const;
